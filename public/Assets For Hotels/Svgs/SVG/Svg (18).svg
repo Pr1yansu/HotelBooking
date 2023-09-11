@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336.84 340.24">
+  <defs>
+    <style>
+      .cls-1 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        mix-blend-mode: hard-light;
+      }
+
+      .cls-3 {
+        fill: #586168;
+      }
+    </style>
+  </defs>
+  <g class="cls-1">
+    <g id="Layer_2" data-name="Layer 2">
+      <g id="Layer_1-2" data-name="Layer 1">
+        <g class="cls-2">
+          <path class="cls-3" d="M237.15,29.8V268.11h77.93C269.06,222.78,237.15,29.8,237.15,29.8Z"/>
+          <path class="cls-3" d="M218.83,29.8s-29.51,186.17,0,238.31H26.37Z"/>
+          <rect class="cls-3" y="283" width="336.84" height="6.87"/>
+          <path class="cls-3" d="M231.81,282.42c0,2.84-1.45,5.15-3.24,5.15h0c-1.78,0-3.22-2.31-3.22-5.15V5.17c0-2.86,1.44-5.17,3.22-5.17h0c1.79,0,3.24,2.31,3.24,5.17Z"/>
+          <polygon class="cls-3" points="0 295.15 336.84 295.15 306.22 340.24 26.36 340.24 0 295.15"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
