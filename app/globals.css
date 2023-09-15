@@ -1,8 +1,5 @@
 @tailwind base;
 @tailwind components;
-<<<<<<< HEAD
-@tailwind utilities;
-=======
 @tailwind utilities;
 
 * {
@@ -11,4 +8,50 @@
   box-sizing: border-box;
   font-weight: 400;
 }
->>>>>>> master
+
+/* heading font weight and size */
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+h6 {
+  font-size: 0.75rem;
+  font-weight: 200;
+}
+
+/* heading font weight and size end */
+
+/* All other fonts */
+
+p,
+span,
+div,
+li,
+ul {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* All other fonts end */

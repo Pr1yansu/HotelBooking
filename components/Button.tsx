@@ -13,6 +13,7 @@ interface ButtonProps {
   transparent?: boolean;
   icon?: React.ReactNode;
   rounded?: boolean;
+  ghost?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -25,6 +26,7 @@ const Button: React.FC<ButtonProps> = ({
   transparent,
   icon,
   rounded,
+  ghost,
 }) => {
   return (
     <Link href={link || "#"} className={`${fullWidth ? "w-full" : "w-auto"}`}>
@@ -35,27 +37,32 @@ const Button: React.FC<ButtonProps> = ({
         } ${disabled ? "!border-0 cursor-not-allowed" : null} ${
           fullWidth ? "w-full" : "w-auto"
         }
-      ${rounded ? "rounded-full" : "rounded-md"}`}
+      ${rounded ? "rounded-full" : "rounded-md"}
+      ${ghost && "bg-transparent border-0 hover:bg-primary/40 duration-100"}`}
         onClick={onClick && onClick}
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        transition={{ duration: 0.2 }}
+        whileTap={{ scale: 0.97 }}
+        transition={{ duration: 0.1 }}
       >
-        <div
-          className={`absolute bg-primary z-10 top-0 h-full w-full duration-300 ${
-            transparent
-              ? "-left-full group-hover:left-0"
-              : "left-0 group-hover:-left-full"
-          }
+        {ghost ? null : (
+          <div
+            className={`absolute bg-primary z-10 top-0 h-full w-full duration-300 ${
+              transparent
+                ? "-left-full group-hover:left-0"
+                : "left-0 group-hover:-left-full"
+            }
           ${disabled ? "!bg-gray-300 !left-0" : null}`}
-        ></div>
+          ></div>
+        )}
         {icon && icon}
         <div
           className={`relative z-20 duration-300 ${
             transparent
               ? "text-primary group-hover:text-white"
               : "text-white group-hover:text-primary"
-          } ${disabled ? "!text-gray-600" : null}
+          }
+          ${ghost && "!text-primary group-hover:!text-white"} ${
+            disabled ? "!text-gray-600" : null
+          }
           `}
         >
           {title}

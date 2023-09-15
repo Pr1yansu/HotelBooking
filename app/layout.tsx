@@ -1,6 +1,9 @@
+import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
+import Header from "@/components/Header";
 
 export const heading = Montserrat({
   subsets: ["latin"],
@@ -24,7 +27,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={description.className}>{children}</body>
+      <body className={description.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Header />
+          <main>{children}</main>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
