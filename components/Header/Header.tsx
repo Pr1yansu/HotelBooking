@@ -1,0 +1,26 @@
+"use client";
+import React, { useState } from "react";
+import { GiSonicShoes } from "react-icons/gi";
+import HamBurger from "./HamBurger";
+import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNav";
+import { AnimatePresence } from "framer-motion";
+
+const Header = () => {
+  const [open, setOpen] = useState(false);
+  const handleMenu = () => {
+    setOpen(!open);
+  };
+  return (
+    <header className="dark:bg-zinc-900 shadow-lg bg-slate-100/75 px-8 py-3 flex justify-between items-center fixed left-0 right-0 top-0">
+      <GiSonicShoes size={40} className="text-primary" />
+      <DesktopNav />
+      <HamBurger handleMenu={handleMenu} isOpen={open} />
+      <AnimatePresence>
+        {open && <MobileNav handleMenu={handleMenu} />}
+      </AnimatePresence>
+    </header>
+  );
+};
+
+export default Header;

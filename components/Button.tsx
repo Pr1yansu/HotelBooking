@@ -11,9 +11,10 @@ interface ButtonProps {
   disabled?: boolean;
   fullWidth?: boolean;
   transparent?: boolean;
-  icon?: React.ReactNode;
+  Icon?: React.ElementType;
   rounded?: boolean;
   ghost?: boolean;
+  name?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -24,9 +25,10 @@ const Button: React.FC<ButtonProps> = ({
   disabled,
   fullWidth,
   transparent,
-  icon,
+  Icon,
   rounded,
   ghost,
+  name,
 }) => {
   return (
     <Link href={link || "#"} className={`${fullWidth ? "w-full" : "w-auto"}`}>
@@ -53,7 +55,7 @@ const Button: React.FC<ButtonProps> = ({
           ${disabled ? "!bg-gray-300 !left-0" : null}`}
           ></div>
         )}
-        {icon && icon}
+        {Icon && <Icon className="relative z-10" />}
         <div
           className={`relative z-20 duration-300 ${
             transparent
@@ -65,7 +67,7 @@ const Button: React.FC<ButtonProps> = ({
           }
           `}
         >
-          {title}
+          {name}
         </div>
       </motion.button>
     </Link>

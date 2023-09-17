@@ -1,9 +1,8 @@
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Montserrat, Poppins } from "next/font/google";
-import { ThemeSwitcher } from "@/components/ThemeSwitcher";
-import Header from "@/components/Header";
+import { Montserrat, Poppins, Sacramento } from "next/font/google";
+import Header from "@/components/Header/Header";
 
 export const heading = Montserrat({
   subsets: ["latin"],
@@ -13,6 +12,12 @@ export const heading = Montserrat({
 export const description = Poppins({
   subsets: ["latin"],
   weight: ["400", "700"],
+});
+
+export const cursive = Sacramento({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: "normal",
 });
 
 export const metadata: Metadata = {
