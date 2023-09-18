@@ -28,7 +28,7 @@ const page = () => {
             reservation at a time.
           </p>
         </div>
-        <div className="lg:w-1/2 w-full p-2 max-lg:text-center max-lg:order-1 relative lg:flex">
+        <div className="lg:w-1/2 w-full p-2 max-lg:text-center max-lg:order-1 relative">
           <Image
             width={400}
             height={500}
