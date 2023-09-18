@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
-import { HiMenuAlt1 } from "react-icons/Hi";
-import { AiOutlineClose } from "react-icons/Ai";
+import React from "react";
+import { HiMenuAlt1 } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
 
 interface Props {
   handleMenu: () => void;
