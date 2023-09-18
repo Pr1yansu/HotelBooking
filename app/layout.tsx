@@ -27,12 +27,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-        <link rel="icon" href="/favicon.ico" />
         <title>Hotel Booking</title>
         <meta name="description" content="Hotel Booking" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
       </head>
       <body className={`${description.className} dark:bg-zinc-950 bg-zinc-100`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
