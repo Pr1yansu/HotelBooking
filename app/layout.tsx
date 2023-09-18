@@ -1,6 +1,6 @@
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import { Allura, Montserrat, Poppins } from "next/font/google";
 import Header from "@/components/Header/Header";
 
