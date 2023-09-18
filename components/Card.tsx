@@ -1,7 +1,7 @@
 import { cursive, heading } from "@/app/layout";
 import Image from "next/image";
 import React from "react";
-import { AiFillStar } from "react-icons/ai";
+import { BsStarFill } from "react-icons/bs";
 
 interface Props {
   data: {
@@ -41,7 +41,7 @@ const Card: React.FC<Props> = ({ data }) => {
           <span className={`${heading.className} text-base`}>{data.price}</span>
           <span className="mx-2 flex text-sm text-gray-500">
             {data.rating} ({data.reviewCount}
-            <AiFillStar size={18} className="text-primary" />)
+            <BsStarFill size={18} className="text-primary" />)
           </span>
         </div>
       </div>
