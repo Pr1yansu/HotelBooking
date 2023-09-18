@@ -35,7 +35,7 @@ const Links: React.FC<NavLink> = ({ handleMenu }) => {
         return (
           <li
             key={i}
-            className={`${heading.className} font-semibold text-lg`}
+            className={`${heading.className} font-semibold text-base`}
             onClick={handleMenu}
           >
             <Link

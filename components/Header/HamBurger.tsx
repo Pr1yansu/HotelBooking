@@ -11,7 +11,7 @@ interface Props {
 const HamBurger: React.FC<Props> = ({ handleMenu, isOpen }) => {
   return (
     <button
-      className="hover:cursor-pointer relative z-50"
+      className="md:hidden hover:cursor-pointer relative z-50"
       title="Menu"
       onClick={handleMenu}
     >

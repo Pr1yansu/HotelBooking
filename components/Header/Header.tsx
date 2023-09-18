@@ -12,7 +12,7 @@ const Header = () => {
     setOpen(!open);
   };
   return (
-    <header className="dark:bg-zinc-900 shadow-lg bg-slate-100/75 px-8 py-3 flex justify-between items-center fixed left-0 right-0 top-0">
+    <header className="px-8 py-3 flex justify-between items-center fixed left-0 right-0 top-0 z-50">
       <GiSonicShoes size={40} className="text-primary" />
       <DesktopNav />
       <HamBurger handleMenu={handleMenu} isOpen={open} />

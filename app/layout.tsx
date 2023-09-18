@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Montserrat, Poppins, Sacramento } from "next/font/google";
+import { Allura, Montserrat, Poppins } from "next/font/google";
 import Header from "@/components/Header/Header";
 
 export const heading = Montserrat({
@@ -14,7 +14,7 @@ export const description = Poppins({
   weight: ["400", "700"],
 });
 
-export const cursive = Sacramento({
+export const cursive = Allura({
   subsets: ["latin"],
   weight: ["400"],
   style: "normal",
@@ -32,7 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={description.className}>
+      <body className={`${description.className} dark:bg-zinc-950 bg-zinc-100`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
           <main>{children}</main>

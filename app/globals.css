@@ -7,6 +7,13 @@
   padding: 0;
   box-sizing: border-box;
   font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
 }
 
 /* heading font weight and size */
@@ -55,3 +62,53 @@ ul {
 }
 
 /* All other fonts end */
+
+/* Animations */
+.animation-first {
+  animation: animation-first 5s ease-in-out infinite;
+}
+
+.animation-second {
+  animation: animation-second 5s ease-in-out infinite;
+}
+
+@keyframes animation-first {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: translateX(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes animation-second {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: translateY(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+
+/* Animations end */
+
+input>svg {
+  fill: #967bb6 !important;
+}
